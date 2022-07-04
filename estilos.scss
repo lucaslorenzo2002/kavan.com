@@ -1,0 +1,100 @@
+/* universal inicio */
+
+
+
+/* universal fin */
+
+/* variables inicio */
+
+$bgc1:rgb(24, 22, 22);
+$bgc2:#222222;
+$bgc3:#b70e21;
+$bgc4:#d63031;
+$bgc5:rgb(80,70,70);
+$bgc6:rgb(0,103,123,0.6);
+
+$color1:white;
+$color2:black;
+$color3:orangered;
+$color4:red;
+$color5:gray;
+$color6:rgb(190, 137, 137);
+
+$ff1:sans-serif;
+$ff2:x;
+$ff3:x;
+$ff4:x;
+
+$degradado1:linear-gradient(to bottom, rgb(24,22,22), rgb(65,60,60));
+$degradado2:linear-gradient(to bottom, black, rgb(69,60,60));
+
+/* variables fin */
+
+/* header inicio */
+a{
+    font-family: $ff1;
+    font-size: 30px;
+    color:$color1
+}
+
+
+/* header fin */
+
+/* footer inicio */
+
+
+
+/* footer fin */
+
+
+/* index inicio */
+
+#hero{
+    height: 450px;
+    width: 100%;
+    background-image:
+    url(imgAutos/con\ 4.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1{
+        color: $color1;
+        margin: 3rem auto;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+        margin-left: 15px;
+    }
+
+    h4{
+        color: $color1;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+        margin-left: 15px;   
+    }
+
+    button{
+        color:$color1;
+        margin-top: 20px;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+        margin-left: 15px;
+    }
+
+    p{
+        font-size: 20px;
+        margin: 3rem auto;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+        margin-left: 15px;
+    }
+
+
+} 
+
+#razonesParaComprar{
+    
+    h2{
+        font-size: 60px;
+    }
+}
+
+
+
+/* index fin */
