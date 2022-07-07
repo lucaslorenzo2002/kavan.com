@@ -47,6 +47,8 @@ window.addEventListener('load',()=>{
    
 let catalogo = document.getElementsByClassName("catalogo"); 
 
+
+
 alert("el auto de tus suenos a unos clics de distancia");
     let confirmar = confirm('desea filtrar los autos?');
     if(confirmar === true){
@@ -59,7 +61,7 @@ alert("el auto de tus suenos a unos clics de distancia");
                     for(const auto of resultadoMarca){
                         let item = document.createElement("figure");
                         item.innerHTML = `<h4>${auto.marca} ${auto.modelo}</h4>   
-                                            <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
+                                            <p>${auto.ano} || ${auto.KM} || Buenos aires</p>
                                             <p>${auto.precio}</p>`;
                         document.body.appendChild(item)            
                 }
@@ -72,9 +74,9 @@ alert("el auto de tus suenos a unos clics de distancia");
                     for(const auto of resultadoAno){
                         let item = document.createElement("figure");
                         item.innerHTML = `<h4>${auto.marca} ${auto.modelo}</h4>   
-                                            <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
+                                            <p>${auto.ano} || ${auto.KM} || Buenos aires</p>
                                             <p>${auto.precio}</p>`;
-                            document.body.appendChild(item)              
+                        document.body.appendChild(item)              
                 }
             }else if(asignarFiltro === "KM"){
                 let filtro = parseInt(prompt("ingrese la cantidad maxima de kilometros que busca"));
@@ -84,7 +86,7 @@ alert("el auto de tus suenos a unos clics de distancia");
                     for(const auto of resultadoKM){
                         let item = document.createElement("figure");
                         item.innerHTML = `<h4>${auto.marca} ${auto.modelo}</h4>   
-                                            <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
+                                            <p>${auto.ano} || ${auto.KM} || Buenos aires</p>
                                             <p>${auto.precio}</p>`;
                         document.body.appendChild(item)              
                 }
@@ -97,7 +99,7 @@ alert("el auto de tus suenos a unos clics de distancia");
                     for(const auto of resultadoPrecio){
                         let item = document.createElement("figure");
                         item.innerHTML = `<h4>${auto.marca} ${auto.modelo}</h4>   
-                                            <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
+                                            <p>${auto.ano} || ${auto.KM} || Buenos aires</p>
                                             <p>${auto.precio}</p>`;
                     document.body.appendChild(item)              
                 }
@@ -119,47 +121,3 @@ alert("el auto de tus suenos a unos clics de distancia");
 
 
 
-
-
-
-
-
-
-
-/* for(const auto of autos){
-    let item = document.createElement("figure");
-    item.innerHTML = `<h2>${auto.marca} ${auto.modelo}</h2>   
-                        <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
-                        <p>${auto.precio}</p>`;
-    document.body.appendChild(item)
-} 
- */
-
-
-/* let filtro = parseInt(prompt("ingrese el precio del auto"));
-let filtrados = autos.filter(elemento => elemento.precio < filtro) ;
-
-for(const auto of filtrados){
-             let item = document.createElement("figure");
-    item.innerHTML = `<h2>${auto.marca} ${auto.modelo}</h2>   
-                        <p>${auto.ano} || ${auto.modelo} || Buenos aires</p>
-                        <p>${auto.precio}</p>`;
-    document.body.appendChild(item)        
-                    } */
-
-
-
-
-
-
-/*  
-     {
-
-        
-            
-                
-                      */
- 
-
-/* let filtro = parseInt(prompt("ingrese el precio del auto"));
-let filtrados = autos.filter(elemento => elemento.precio < filtro) ;   */
