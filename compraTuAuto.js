@@ -1,4 +1,62 @@
 window.addEventListener('load',()=>{
+
+//Buscador de contenido
+
+
+document.getElementById("icon-search").addEventListener("click", mostrar_buscador);
+document.getElementById("cover-ctn-search").addEventListener("click", ocultar_buscador);
+
+let barsSearch = document.getElementById("ctn-bars-search");
+let cover_ctn_search =  document.getElementById("cover-ctn-search");
+let inputSearch = document.getElementById("inputSearch");
+let boxSearch = document.getElementById("box-search");
+
+
+function mostrar_buscador(){
+
+    barsSearch.style.top = "-13px";
+    cover_ctn_search.style.display = "block";
+    inputSearch.focus();
+
+}
+
+function ocultar_buscador(){
+
+    barsSearch.style.top = "-200px";
+    cover_ctn_search.style.display = "none";
+    inputSearch.value = "";
+
+}
+
+
+document.getElementById("inputSearch").addEventListener("keyup", buscadorInterno)
+
+function buscadorInterno (){
+
+   let filter = inputSearch.value.toUpperCase();
+   let li = boxSearch.getElementsByTagName("li");
+
+
+   for(let i = 0; i < li.length; i++){
+    let a = li[i].getElementsByTagName("a")[0];
+    let textValue = a.textContent || a.innerText;
+
+    if(textValue.toUpperCase().indexOf(filter) > -1){
+        li[i].style.display = "";
+        boxSearch.style.display = "block";
+
+        if(inputSearch.value === ""){
+            boxSearch.style.display = "none";
+        }
+
+    } else{
+        li[i].style.display = "none"
+    }
+   }
+}  
+
+
+
     class auto{
         constructor(marca, modelo, ano, KM, precio, img){
             this.marca = marca;
@@ -107,12 +165,13 @@ alert("el auto de tus suenos a unos clics de distancia");
             }
             } 
     
+            
 
         })
 
 
 
-
+       
 
 
 
